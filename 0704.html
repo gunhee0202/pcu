@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>방문 요일에 따라 배경색 변경</title>
+</head>
+<body>
+
+    <h2>일요일은 pink, 다른 요일은 gold 배경</h2>
+    <hr>
+
+    <script>
+        let now = new Date();
+        let day = now.getDay();
+
+        // 요일 이름 배열
+        let week = ["일", "월", "화", "수", "목", "금", "토"];
+
+        // 일요일이면 pink, 나머지는 gold
+        if(day == 0) {
+            document.body.style.backgroundColor = "pink";
+        } else {
+            document.body.style.backgroundColor = "gold";
+        }
+
+        // 날짜 출력
+        document.write(
+            "<h3>오늘 : "
+            + now.getDate() + "일,"
+            + week[day] + "요일</h3>"
+        );
+    </script>
+
+</body>
+</html>
